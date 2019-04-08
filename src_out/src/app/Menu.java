@@ -13,6 +13,8 @@ public class Menu {
         boolean tempout = false;
         System.out.println("--Selecionar opção--");
         System.out.println("1) Adicionar cliente");
+        System.out.println("2) Ver lista de todos os clientes");
+       
 
         switch (Integer.valueOf(input.readLine()).intValue()) {
             case 1:

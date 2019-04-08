@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Trabalho_Poo.iml" filepath="$PROJECT_DIR$/.idea/Trabalho_Poo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src_out/src_bluej.iml" filepath="$PROJECT_DIR$/src_out/src_bluej.iml" />
     </modules>
   </component>
 </project>
