@@ -5,7 +5,7 @@ class Store {
     private Rent[] history;
     private Prod[] carList;
     private User[] userList;
-    ]
+    
 	public Store(String name) {
 		super();
 		this.name = name;
