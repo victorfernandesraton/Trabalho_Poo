@@ -5,7 +5,7 @@ import java.util.*;
 class Rent{
     private String id;
     private short status;
-    private Car car;
+    private Car car; //teste
 
     public Rent(Car car) {
         this.car = car;
