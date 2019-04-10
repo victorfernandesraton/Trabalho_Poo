@@ -5,6 +5,7 @@ public class Car {
 	private String model,color, plate;
 	private double price;
 	private short category,yfactory;
+	private boolean status;
 	
 	public Car(String model, String color, String plate, short yfactory, double price) 
 	{
@@ -18,6 +19,7 @@ public class Car {
 		this.category = category;
 		this.yfactory = yfactory;
 		this.price = price;
+		this.status = true;
 	}
 	
 	public String getModel() 
@@ -80,5 +82,17 @@ public class Car {
 	{
 		this.price = price;
 	}
+
+	public boolean getStatus() {
+		return status;
+	}
+
+	public void changeStatus() {
+		if (status = true) {
+			status = false;
+		} else status = false;
+	}
+	
+	
 	
 }
