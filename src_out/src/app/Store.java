@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-package app;
-
-class Store {
-    private String name;
-    private Rent[] history;
-    private Prod[] carList;
-    
-    public Store
-=======
 package app;
 
 class Store {
@@ -52,8 +42,5 @@ class Store {
 			return history[index];
 		} else return null;
 	}
-	
-	
-    
->>>>>>> branch 'master' of https://github.com/victorfernandesraton/Trabalho_Poo
+	    
 }
