@@ -20,8 +20,7 @@ class Prod {
         this.unity = 0;
     }
 
-    public Car getCar() 
-    {
+    public Car getCar() {
         return this.car;
     }
 
