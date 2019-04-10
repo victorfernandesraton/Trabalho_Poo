@@ -12,7 +12,7 @@ class Rent{
         this.status = (short) 1;
         Random rand = new Random();
         // gera n aleatório de 7
-        this.id = String.valueOf(rand.nextInt(1000000 - 99999999));
+        this.id = String.valueOf(rand.nextInt(9999999));
     }
 
     public Rent(String id, short status, Car car) 

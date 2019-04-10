@@ -15,7 +15,7 @@ class Prod {
 
     public Prod(Car car) {
         Random rand = new Random();
-        this.id = String.valueOf(rand.nextInt(1000000 - 99999999));
+        this.id = String.valueOf(rand.nextInt(9999999));
         this.car = car;
         this.unity = 0;
     }
