@@ -23,7 +23,7 @@ class Store {
 	}
 	
 	public boolean isHistory(int index) {
-		if (history[i] != null) {
+		if (history[index] != null) {
 			return true;
 		} else return false;
 	}
@@ -39,7 +39,7 @@ class Store {
 	
 	public Rent getHistory(int index) {
 		if (isHistory(index) == true) {
-			return history[i];
+			return history[index];
 		} else return null;
 	}
 	
