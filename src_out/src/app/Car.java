@@ -2,17 +2,17 @@ package app;
 
 public class Car {
 
-	private String model,color, plate;
+	private String model,color, plate, category;
 	private double price;
-	private short category,yfactory;
+	private short yfactory;
 	private boolean status;
 	
 	public Car(String model, String color, String plate, short yfactory, double price) 
 	{
-		this(model, color, plate, (short) 1, yfactory, price,0);
+		this(model, color, plate, "Basico", yfactory, price,0);
 	}
 
-	public Car(String model, String color, String plate, short category, short yfactory, double price,int  unity) {
+	public Car(String model, String color, String plate, String category, short yfactory, double price,int  unity) {
 		this.model = model;
 		this.color = color;
 		this.plate = plate;
@@ -52,12 +52,12 @@ public class Car {
 		this.plate = plate;
 	}
 
-	public short getCategory() 
+	public String getCategory() 
 	{
 		return this.category;
 	}
 
-	public void setCategory(short category) 
+	public void setCategory(String category) 
 	{
 		this.category = category;
 	}
