@@ -25,6 +25,6 @@ public class App {
 		System.out.println("Dados do usuárui 0");
 		store.userDataPrint(user[0].getCpf());
 		System.out.println("Casos em que o user1 pegou carros de cadegoria comun");
-		store.searchCategoryfull(user[0].getCpf(), car[0].getCategory());
+	    System.out.println(store.getRentList().get(0).getTotal());
 	}
 }
