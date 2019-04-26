@@ -1,13 +1,16 @@
 package app;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Calendar; // para facilitar a aplicação da data
+import java.util.Random; // para gerar um id de protocolo
 
 public class Rent {
 	private String id, status, userName, userCpf, carPlate, carModel;
 	private double total;
 	private Calendar datastart, dataend;
 	
+	// porque não pude aplicar sobrecarga completa: neste formato ocorre erro
+	// ao gerar n de protocolo randônico
 	public Rent(Car car, User user) {
         Random random = new Random();
 		this.status = "Pedido realizado";
@@ -17,7 +20,6 @@ public class Rent {
 		this.userCpf = user.getCpf();
 		this.userName = user.getName();
 		this.total = car.getPrice();
-		// formata a data
 		this.datastart = Calendar.getInstance();
 	}
 	

@@ -27,6 +27,7 @@ public class Car {
 		 this.status = true;
 	}
 	
+	// gettters & setters
 	public String getModel() {
 		return model;
 	}
@@ -99,5 +100,6 @@ public class Car {
 	
 	public void printCar() {
 		System.out.println("Modelo: "+this.model + " Placa :"+this.plate);
+		System.out
 	}
 }
