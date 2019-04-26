@@ -93,7 +93,7 @@ public class Store {
 						isPick(car2,rent);
 						return false;
 					}
-				}
+				}b
 			}
 		}
 		return false;
