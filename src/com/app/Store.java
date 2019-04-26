@@ -1,4 +1,4 @@
-package app;
+package com.app;
 
 import java.util.*;
 
@@ -8,8 +8,8 @@ public class Store {
 	private ArrayList<User> userList;
 	private ArrayList<Rent> rentList;
 	private ArrayList<Rent> history;
-	
-	
+
+
 	public Store(String name) {
 		this.name = name;
 		this.carList = new ArrayList<Car>();
@@ -17,7 +17,7 @@ public class Store {
 		this.history = new ArrayList<Rent>();
 		this.userList = new ArrayList<User>();
 	}
-	
+
 	public User searchCpf(String cpf) {
 		for (User user : userList) {
 			if (user.getCpf().equals(cpf)) {
@@ -26,7 +26,7 @@ public class Store {
 		}
 		return null;
 	}
-	
+
 	public Car searchPlate(String plate) {
 		for (Car car : carList) {
 			if (car.comparePlate(plate)) {
@@ -35,13 +35,13 @@ public class Store {
 		}
 		return null;
 	}
-	
+
 	public boolean addRent(Rent rent) {
-		if (rentList.add(rent) && history.add(rent)) {			
+		if (rentList.add(rent) && history.add(rent)) {
 			return true;
 		} else return false;
 	}
-	
+
 	public Rent[] searchRentListWithUser(String cpf) {
 		Rent[] tempRents;
 		int index = 0;
@@ -56,7 +56,7 @@ public class Store {
 			return null;
 		} else return tempRents;
 	}
-	
+
 	public Rent searchRent(String cpf) {
 		for(Rent rent: rentList) {
 			if(rent.getUserCpf().equals(cpf)) {
@@ -65,39 +65,40 @@ public class Store {
 		}
 		return null;
 	}
-	
-	public void pickCar(Rent rent) {
-		if (searchPlate(rent.getCarPlate()) != null) {
-			for (Car car : carList) {
-				if(car.getPlate().equals(rent.getCarPlate())) {
-					if (car.getStatus()) {						
-						car.changeStatus();
-						for (User user : userList) {
-							if (user.getCpf().equals(rent.getUserCpf())) {								
-								user.addActive(car);
-								history.add(rent);
-								System.out.println("Carro retirado");
-							}
-						}
-					} else {
-						for (Car car2 : carList) {
-							if (car2.compareCar(car)) {
-								for (User user : userList) {
-									if (user.getCpf().equals(rent.getUserCpf())) {								
-										user.addActive(car);
-										history.add(rent);
-									}
-								}		
-							}
-						}
-					}
-				}
-			} 
-		} else {
-			System.out.println("Error, carro não disponíevl");
+
+	public void isPick(Car car, Rent rent) {
+		if (car.getPlate().equals(rent.getCarPlate())) {
+			car.changeStatus();
+			rent.setStatus("Carro retirado");
 		}
 	}
-	
+
+
+
+	public boolean pickCar(Rent rent) {
+		for(Rent list: rentList) {
+			if (rent.equals(list)) {
+				for(Car car: carList) {
+					if (car.getPlate().equals(list.getCarPlate()) && car.getStatus()) {
+						isPick(car,list);
+						System.out.println("Busca interna");
+						return true;
+					}
+				}
+			} else {
+				System.out.println("Busca externa");
+				for (Car car2: carList) {
+					if (car2.getStatus() == true) {
+						if (car2.compareCar(car))
+						isPick(car2,rent);
+						return false;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
 	public boolean endRent(Rent rent) {
 		for (Rent rents: rentList) {
 			if (rents.equals(rent)) {
@@ -114,11 +115,11 @@ public class Store {
 		}
 		return false;
 	}
-	
+
 	public void searchCategoryfull(String cpf, String category ) {
 		if (searchRentListWithUser(cpf) != null) {
 			for(int i = 0; i < searchRentListWithUser(cpf).length; i++) {
-				if (searchRentListWithUser(cpf)[i] != null) {					
+				if (searchRentListWithUser(cpf)[i] != null) {
 					if (searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(cpf)[i].getStatus().equals("Carro retirado")) {
 						searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).printCar();
 						searchRentListWithUser(cpf)[i].printRent();
@@ -134,10 +135,10 @@ public class Store {
 			}
 		} else System.out.println("Lista vazia, busca não resultou em nada");
 	}
-	
+
 	public double rentTotalCoast(String cpf) {
 		double aux = 0;
-		if (searchRentListWithUser(cpf) != null) {			
+		if (searchRentListWithUser(cpf) != null) {
 			for (int i = 0; i < searchRentListWithUser(cpf).length; i++) {
 				if (searchRentListWithUser(cpf)[i].getStatus().equals("Encerrado")) {
 					aux += searchRentListWithUser(cpf)[i].rentCoast();
@@ -149,7 +150,7 @@ public class Store {
 			return 0;
 		} else return aux;
 	}
-	
+
 	public void userDataPrint(String cpf) {
 		for (int i = 0; i < userList.size(); i++) {
 			userList.get(i).userPrint();
@@ -164,43 +165,43 @@ public class Store {
 				}
 		}
 	}
-	
+
 	public boolean AddUser(User user) {
 		if (userList.add(user)) {
 			return true;
 		} else return false;
 	}
-	
+
 	public boolean AddCar(Car car) {
 		if (carList.add(car)) {
 			return true;
 		} else return false;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public ArrayList<User> getUserList() {
 		return userList;
 	}
-	
+
 	public ArrayList<Car> getCarList() {
 		return carList;
 	}
-	
+
 	public ArrayList<Rent> getRentList() {
 		return rentList;
 	}
-	
+
 	public ArrayList<Rent> getHistory() {
 		return rentList;
 	}
-	
 
-	
+
+
 }
