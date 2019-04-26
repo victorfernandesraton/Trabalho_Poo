@@ -100,6 +100,6 @@ public class Car {
 	
 	public void printCar() {
 		System.out.println("Modelo: "+this.model + " Placa :"+this.plate);
-		System.out
+		System.out.println("Categoria"+this.category);
 	}
 }
