@@ -89,7 +89,7 @@ public class Store {
 				System.out.println("Busca externa");
 				for (Car car2: carList) {
 					if (car2.getStatus() == true) {
-						if (car2.compareCar(car))
+						if (car2.compareCar(c
 						isPick(car2,rent);
 						return false;
 					}
