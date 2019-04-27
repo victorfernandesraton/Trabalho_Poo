@@ -32,11 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fba8a99-d048-4d1a-aaca-942fdaf7a866" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/rent/com/app/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rent/com/app/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/Store.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/app/Rent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2726">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,11 +72,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="116">
               <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/app/Store.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="120" column="83" selection-start-line="120" selection-start-column="83" selection-end-line="120" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -215,6 +221,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -305,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556329101455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="final: diagrama">
+      <created>1556338782213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1556338782213</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -319,7 +333,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22204472" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -371,7 +384,8 @@
     <MESSAGE value="versão final: correção pick" />
     <MESSAGE value="versão final: correção pick: erro persiste" />
     <MESSAGE value="final: erro persistente: correção" />
-    <option name="LAST_COMMIT_MESSAGE" value="final: erro persistente: correção" />
+    <MESSAGE value="final: diagrama" />
+    <option name="LAST_COMMIT_MESSAGE" value="final: diagrama" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -382,13 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="120" column="83" selection-start-line="120" selection-start-column="83" selection-end-line="120" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -420,7 +427,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/app/Rent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2726">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -452,6 +459,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="120" column="83" selection-start-line="120" selection-start-column="83" selection-end-line="120" selection-end-column="83" />
         </state>
       </provider>
     </entry>
