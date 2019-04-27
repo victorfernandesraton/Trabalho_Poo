@@ -115,23 +115,14 @@ public class Store {
 		return false;
 	}
 
-	public void searchCategoryfull(String cpf, String category ) {
-		if (searchRentListWithUser(cpf) != null) {
-			for(int i = 0; i < searchRentListWithUser(cpf).length; i++) {
-				if (searchRentListWithUser(cpf)[i] != null) {
-					if (searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(cpf)[i].getStatus().equals("Carro retirado")) {
-						searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).printCar();
-						searchRentListWithUser(cpf)[i].printRent();
-						for (Car car: carList) {
-							if (searchRentListWithUser(cpf)[i].getCarPlate().equals(car)) {
-								car.printCar();
-							}
-
-						}
-
-					}
+	public void searchCategoryfull(User user, String category ) {
+		int aux = 0;
+		if (searchRentListWithUser(user.getCpf()) != null) {
+			for(int i = 0; i < searchRentListWithUser(user.getCpf()).length; i++) {
+				if (searchRentListWithUser(user.getCpf())[i] != null && searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(cpf)[i].getStatus().equals("Carro retirado")) {
+					aux++;
 				}
-			}
+			} System.out.println("O cliente "+user.getName()+ " alugou  "+ aux + " carros da categoria "+ category);
 		} else System.out.println("Lista vazia, busca não resultou em nada");
 	}
 

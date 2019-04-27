@@ -24,9 +24,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fba8a99-d048-4d1a-aaca-942fdaf7a866" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/rent/com/app/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rent/com/app/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/app/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/Rent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/rent/com/app/Rent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rent/com/app/Rent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/app/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/Store.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,18 +40,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/app/Store.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="202" column="1" lean-forward="true" selection-start-line="202" selection-start-column="1" selection-end-line="202" selection-end-column="1" />
+            <state relative-caret-position="146">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
-                <element signature="e#4486#4487#0" expanded="true" />
-                <element signature="e#4546#4547#0" expanded="true" />
-                <element signature="e#4609#4610#0" expanded="true" />
-                <element signature="e#4669#4670#0" expanded="true" />
-                <element signature="e#4732#4733#0" expanded="true" />
-                <element signature="e#4794#4795#0" expanded="true" />
+                <element signature="e#4217#4218#0" expanded="true" />
+                <element signature="e#4235#4236#0" expanded="true" />
+                <element signature="e#4272#4273#0" expanded="true" />
+                <element signature="e#4295#4296#0" expanded="true" />
+                <element signature="e#4336#4337#0" expanded="true" />
+                <element signature="e#4358#4359#0" expanded="true" />
+                <element signature="e#4397#4398#0" expanded="true" />
+                <element signature="e#4418#4419#0" expanded="true" />
+                <element signature="e#4459#4460#0" expanded="true" />
+                <element signature="e#4481#4482#0" expanded="true" />
+                <element signature="e#4521#4522#0" expanded="true" />
+                <element signature="e#4543#4544#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/Rent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="133" selection-end-column="5" />
+            <state relative-caret-position="107">
+              <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1052#1053#0" expanded="true" />
@@ -97,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="546">
+              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,8 +133,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/app/Car.java" />
-        <option value="$PROJECT_DIR$/src/com/app/Rent.java" />
         <option value="$PROJECT_DIR$/src/com/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/app/Rent.java" />
         <option value="$PROJECT_DIR$/src/com/app/Store.java" />
       </list>
     </option>
@@ -211,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556325489398</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="versão final: correção pick: erro persiste">
+      <created>1556327700480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556327700481</updated>
+    </task>
+    <task id="LOCAL-00004" summary="versão final: correção pick: erro persiste">
+      <created>1556327909490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556327909490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -229,8 +248,8 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20661157" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20661157" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -262,15 +281,25 @@
     </ignored-roots>
     <MESSAGE value="versão final: correção" />
     <MESSAGE value="versão final: correção pick" />
-    <option name="LAST_COMMIT_MESSAGE" value="versão final: correção pick" />
+    <MESSAGE value="versão final: correção pick: erro persiste" />
+    <option name="LAST_COMMIT_MESSAGE" value="versão final: correção pick: erro persiste" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="58">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/app/Rent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="101" column="5" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -286,36 +315,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="546">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/Store.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="202" column="1" lean-forward="true" selection-start-line="202" selection-start-column="1" selection-end-line="202" selection-end-column="1" />
+        <state relative-caret-position="146">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
-            <element signature="e#4486#4487#0" expanded="true" />
-            <element signature="e#4546#4547#0" expanded="true" />
-            <element signature="e#4609#4610#0" expanded="true" />
-            <element signature="e#4669#4670#0" expanded="true" />
-            <element signature="e#4732#4733#0" expanded="true" />
-            <element signature="e#4794#4795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/Rent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="122" column="4" lean-forward="true" selection-start-line="122" selection-start-column="4" selection-end-line="133" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4235#4236#0" expanded="true" />
+            <element signature="e#4272#4273#0" expanded="true" />
+            <element signature="e#4295#4296#0" expanded="true" />
+            <element signature="e#4336#4337#0" expanded="true" />
+            <element signature="e#4358#4359#0" expanded="true" />
+            <element signature="e#4397#4398#0" expanded="true" />
+            <element signature="e#4418#4419#0" expanded="true" />
+            <element signature="e#4459#4460#0" expanded="true" />
+            <element signature="e#4481#4482#0" expanded="true" />
+            <element signature="e#4521#4522#0" expanded="true" />
+            <element signature="e#4543#4544#0" expanded="true" />
           </folding>
         </state>
       </provider>
