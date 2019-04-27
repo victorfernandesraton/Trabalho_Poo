@@ -119,7 +119,7 @@ public class Store {
 		int aux = 0;
 		if (searchRentListWithUser(user.getCpf()) != null) {
 			for(int i = 0; i < searchRentListWithUser(user.getCpf()).length; i++) {
-				if (searchRentListWithUser(user.getCpf())[i] != null && searchPlate(searchRentListWithUser(cpf)[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(cpf)[i].getStatus().equals("Carro retirado")) {
+				if (searchRentListWithUser(user.getCpf())[i] != null && searchPlate(searchRentListWithUser(user.getCpf())[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(user.getCpf())[i].getStatus().equals("Carro retirado")) {
 					aux++;
 				}
 			} System.out.println("O cliente "+user.getName()+ " alugou  "+ aux + " carros da categoria "+ category);
