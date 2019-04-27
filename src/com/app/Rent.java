@@ -31,6 +31,10 @@ public class Rent {
 		this.status = status;
 	}
 
+	public void initRent() {
+		this.status = "Pedidio retiraro";
+	}
+
 	public Calendar getDatastart() {
 		return datastart;
 	}

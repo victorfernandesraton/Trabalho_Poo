@@ -1,5 +1,4 @@
 package com.app;
-
 import java.util.*;
 
 public class Store {
@@ -8,7 +7,6 @@ public class Store {
 	private ArrayList<User> userList;
 	private ArrayList<Rent> rentList;
 	private ArrayList<Rent> history;
-
 
 	public Store(String name) {
 		this.name = name;
@@ -71,15 +69,14 @@ public class Store {
 		rent.setStatus("Carro retirado");
 	}
 
-
-
 	public boolean pickCar(Rent rent) {
 		for(Rent list: rentList) {
 			if (rent.equals(list)) {
 				for(Car car: carList) {
 					if (car.getPlate().equals(list.getCarPlate()) && car.getStatus()) {
 						if (car.getPlate().equals(rent.getCarPlate())) {
-							isPick(car,list);
+							car.changeStatus();
+							list.setStatus("Carro retirado");
 							System.out.println("Busca interna");
 							return true;
 						}
@@ -89,9 +86,11 @@ public class Store {
 				System.out.println("Busca externa");
 				for (Car car2: carList) {
 					if (car2.getStatus() && searchPlate(rent.getCarPlate()).compareCar(car2)) {
+						System.out.println(car2.getPlate());
 						rent.setCarPlate(car2.getPlate());
-						isPick(car2,rent);
-						return false;
+							car2.changeStatus();
+							rent.setStatus("Carro retirado");
+							return false;
 					}
 				}
 			}
@@ -157,14 +156,14 @@ public class Store {
 		}
 		for (int i = 0; i < history.size(); i++) {
 			if (history.get(i).getUserCpf().equals(cpf))
-			history.get(i).printRent();
-				for (Car car: carList) {
-					if (history.get(i).getCarPlate().equals(car.getPlate())) {
+				history.get(i).printRent();
+					for (Car car: carList) {
+						if (history.get(i).getCarPlate().equals(car.getPlate())) {
 						car.printCar();
 					}
 				}
+			}
 		}
-	}
 
 	public boolean AddUser(User user) {
 		if (userList.add(user)) {
@@ -201,7 +200,4 @@ public class Store {
 	public ArrayList<Rent> getHistory() {
 		return rentList;
 	}
-
-
-
 }

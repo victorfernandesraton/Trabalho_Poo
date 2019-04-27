@@ -1,10 +1,8 @@
 package com.app;
-
 import java.io.ObjectInputStream.GetField;
 import java.util.Calendar;
 
 public class Main {
-
 	public static void main(String[] args) {
 		Car[] car = new Car[100];
 		User[] user = new User[2];
@@ -20,14 +18,12 @@ public class Main {
 		store.AddCar(car[1]);
 		store.addRent(rent[0]);
 		store.addRent(rent[1]);
-		store.pickCar(store.getRentList().get(0));
 		System.out.println(store.getCarList().get(0).getStatus());
-		System.out.println(store.getCarList().get(1).getStatus());
-		store.pickCar(store.getRentList().get(1));
+		System.out.println("alugar"+store.pickCar(store.getRentList().get(0)));
+		System.out.println("alugar"+store.pickCar(store.getRentList().get(1)));
 		System.out.println(store.getCarList().get(0).getStatus());
 		System.out.println(store.getCarList().get(1).getStatus());
 		System.out.println(store.getRentList().get(0).getCarPlate());
 		System.out.println(store.getRentList().get(1).getCarPlate());
-
 	}
 }
