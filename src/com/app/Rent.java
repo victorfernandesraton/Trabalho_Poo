@@ -101,13 +101,6 @@ public class Rent {
 		this.status = status;
 	}
 
-	public boolean pickCar() {
-		if (!(this.status.equals("Carro retirado"))) {
-			this.status = "Carro retirado";
-			return true;
-		} else return false;
-	}
-
 	public double rentCoast() {
 		if (dataend == null) {
 			setEnd();
