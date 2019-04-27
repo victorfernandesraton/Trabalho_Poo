@@ -67,10 +67,8 @@ public class Store {
 	}
 
 	public void isPick(Car car, Rent rent) {
-		if (car.getPlate().equals(rent.getCarPlate())) {
-			car.changeStatus();
-			rent.setStatus("Carro retirado");
-		}
+		car.changeStatus();
+		rent.setStatus("Carro retirado");
 	}
 
 
@@ -80,20 +78,22 @@ public class Store {
 			if (rent.equals(list)) {
 				for(Car car: carList) {
 					if (car.getPlate().equals(list.getCarPlate()) && car.getStatus()) {
-						isPick(car,list);
-						System.out.println("Busca interna");
-						return true;
+						if (car.getPlate().equals(rent.getCarPlate())) {
+							isPick(car,list);
+							System.out.println("Busca interna");
+							return true;
+						}
 					}
 				}
 			} else {
 				System.out.println("Busca externa");
 				for (Car car2: carList) {
-					if (car2.getStatus() == true) {
-						if (car2.compareCar(
+					if (car2.getStatus() && searchPlate(rent.getCarPlate()).compareCar(car2)) {
+						rent.setCarPlate(car2.getPlate());
 						isPick(car2,rent);
 						return false;
 					}
-				}b
+				}
 			}
 		}
 		return false;
