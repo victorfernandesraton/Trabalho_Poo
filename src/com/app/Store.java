@@ -40,7 +40,7 @@ public class Store {
 		} else return false;
 	}
 
-	public Rent[] searchRentListWithUser(String cpf) {
+	public Rent[] searchRent(String cpf) {
 		Rent[] tempRents;
 		int index = 0;
 		tempRents = new Rent[history.size()];
@@ -53,20 +53,6 @@ public class Store {
 		if (index == 0) {
 			return null;
 		} else return tempRents;
-	}
-
-	public Rent searchRent(String cpf) {
-		for(Rent rent: rentList) {
-			if(rent.getUserCpf().equals(cpf)) {
-				return rent;
-			}
-		}
-		return null;
-	}
-
-	public void isPick(Car car, Rent rent) {
-		car.changeStatus();
-		rent.setStatus("Carro retirado");
 	}
 
 	public boolean pickCar(Rent rent) {
@@ -117,9 +103,9 @@ public class Store {
 
 	public void searchCategoryfull(User user, String category ) {
 		int aux = 0;
-		if (searchRentListWithUser(user.getCpf()) != null) {
-			for(int i = 0; i < searchRentListWithUser(user.getCpf()).length; i++) {
-				if (searchRentListWithUser(user.getCpf())[i] != null && searchPlate(searchRentListWithUser(user.getCpf())[i].getCarPlate()).getCategory().equals(category) && searchRentListWithUser(user.getCpf())[i].getStatus().equals("Carro retirado")) {
+		if (searchRent(user.getCpf()) != null) {
+			for(int i = 0; i < searchRent(user.getCpf()).length; i++) {
+				if (searchRent(user.getCpf())[i] != null && searchPlate(searchRent(user.getCpf())[i].getCarPlate()).getCategory().equals(category) && searchRent(user.getCpf())[i].getStatus().equals("Carro retirado")) {
 					aux++;
 				}
 			} System.out.println("O cliente "+user.getName()+ " alugou  "+ aux + " carros da categoria "+ category);
@@ -128,10 +114,10 @@ public class Store {
 
 	public double rentTotalCoast(String cpf) {
 		double aux = 0;
-		if (searchRentListWithUser(cpf) != null) {
-			for (int i = 0; i < searchRentListWithUser(cpf).length; i++) {
-				if (searchRentListWithUser(cpf)[i].getStatus().equals("Encerrado")) {
-					aux += searchRentListWithUser(cpf)[i].rentCoast();
+		if (searchRent(cpf) != null) {
+			for (int i = 0; i < searchRent(cpf).length; i++) {
+				if (searchRent(cpf)[i].getStatus().equals("Encerrado")) {
+					aux += searchRent(cpf)[i].rentCoast();
 				}
 			}
 		}
