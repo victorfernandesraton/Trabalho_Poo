@@ -80,6 +80,10 @@ public class Car {
 		return status;
 	}
 
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
 	public void changeStatus() {
 		if (status == true) {
 			status = false;
