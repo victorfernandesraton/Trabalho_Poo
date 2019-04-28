@@ -61,7 +61,7 @@ public class Rent {
 	}
 
 	public void SetCarPlate(Car car) {
-		setCarPlate(car.getCarPlate());
+		setCarPlate(car.getPlate());
 	}
 	
 	public String getCar() {
