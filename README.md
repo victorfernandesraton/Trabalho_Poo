@@ -2,6 +2,9 @@
 
 Atividade avaliativa da disciplina Programação Orientada a Objetos  
 
+## Aluno: Victor Fernandes Baião Raton  
+## Nº: 029182012  
+
 ## Questão:  
 
 Uma locadora de automóveis precisa de um sistema para automatizar suas atividades. A locadora trabalha da seguinte maneira. Todo cliente é cadastrado pelo CPF, nome, telefone e email. Todo automóvel é cadastrado com placa, modelo, cor, ano, categoria (básico, luxo, superluxo). Clientes podem locar diversos automóveis. Em cada locação é informado o período (data de início e data de término), o automóvel locado e calculado o valor da locação. Este cálculo depende da categoria do automóvel, pois para automóveis básicos (categoria mais simples) cobra-se R$ 120,00 a diária, para automóveis de luxo (categoria intermediária) R$ 160,00 e para automóveis com categoria superluxo (melhor categoria) R$ 210,00.  
