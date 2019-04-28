@@ -60,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="276">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -488,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="276">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
