@@ -87,7 +87,7 @@ public class User {
 		System.out.println("--LISTA DE ATIVOS--");
 		for (Car car : actuallist) {
 			for (int i = 0; i < actuallist.size(); i++) {
-				actuallist.get(i).printCar();
+				car.printCar();
 			}
 		}
 	}
