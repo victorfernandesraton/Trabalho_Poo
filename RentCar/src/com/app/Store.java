@@ -37,7 +37,10 @@ public class Store {
 			if (obj.equals(rent)) {
 				obj.setEnd();
 				for(User obj2 : userList) {
-					obj2.removeActive(searchPlate(obj.getCarPlate()));
+					if (obj2.getCpf().equals(obj.getUserCpf())) {
+						obj2.removeActive(searchPlate(obj.getCarPlate()));
+						obj2.addDebit(obj.getTotal());
+					}
 				}
 				return true;			
 			}

@@ -15,6 +15,10 @@ public class User {
 		this.debit = debit;
 	}
 
+	public void addDebit(double debit) {
+		this.debit += debit;
+	}
+
 	public ArrayList<Car> getActuallist() {
 		return actuallist;
 	}
@@ -94,6 +98,7 @@ public class User {
 	public void userPrint() {
 		System.out.println("--DADOS DO USUARIO--");
 		System.out.println("Nome: "+this.name + " CPF: "+this.cpf);
+		System.out.println("Débito total: "+ this.debit);
 		System.out.println("--LISTA DE ATIVOS--");
 		if (actuallist.size() == 0) {
 			System.out.println("Nenhum carro ativo");
