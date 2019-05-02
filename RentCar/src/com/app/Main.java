@@ -1,6 +1,4 @@
 package com.app;
-import java.io.ObjectInputStream.GetField;
-import java.util.Calendar;
 
 public class Main {
 	public static void main(String[] args) {
@@ -25,5 +23,6 @@ public class Main {
 		System.out.println(store.getCarList().get(1).getStatus());
 		System.out.println(store.getRentList().get(0).getCarPlate());
 		System.out.println(store.getRentList().get(1).getCarPlate());
+		store.userDataPrint("862288875-48");
 	}
 }
