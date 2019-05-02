@@ -12,6 +12,8 @@ public class Main {
 		rent[0] = new Rent(car[0], user[0]);
 		rent[1] = new Rent(car[0],user[1]);
 		Store store = new Store("teste");
+		System.out.println("Add user "+store.AddUser(user[0]));
+		System.out.println("Add user "+store.AddUser(user[1]));
 		store.AddCar(car[0]);
 		store.AddCar(car[1]);
 		store.addRent(rent[0]);
@@ -23,6 +25,7 @@ public class Main {
 		System.out.println(store.getCarList().get(1).getStatus());
 		System.out.println(store.getRentList().get(0).getCarPlate());
 		System.out.println(store.getRentList().get(1).getCarPlate());
-		store.userDataPrint("862288875-48");
+		System.out.println(store.searchCpf("862288875-48").getCpf());
+		store.userDataPrint(store.searchCpf("862288875-48"));
 	}
 }

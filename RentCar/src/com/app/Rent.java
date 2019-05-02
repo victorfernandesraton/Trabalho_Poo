@@ -112,7 +112,7 @@ public class Rent {
 		if (dataend == null) {
 			setEnd();
 		}
-		double dif = Math.abs(dataend.get(Calendar.MILLISECOND)) - Math.abs(datastart.get(Calendar.MILLISECOND));
+		double dif = Math.ceil(dataend.get(Calendar.MILLISECOND)) - Math.abs(datastart.get(Calendar.MILLISECOND));
 		if (dif < 1) {
 			return 0;
 		} else {

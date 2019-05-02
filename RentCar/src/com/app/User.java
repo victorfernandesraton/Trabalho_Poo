@@ -77,6 +77,14 @@ public class User {
 		return false;
 	}
 
+	public boolean removeActive(Car car) {
+		for (Car obj : actuallist) {
+			if (obj.getPlate().equals(car.getPlate()) {
+				actuallist.remove(index)
+			}
+		}
+	}
+
 	public ArrayList<Car> getActive() {
 		return actuallist;
 	}
