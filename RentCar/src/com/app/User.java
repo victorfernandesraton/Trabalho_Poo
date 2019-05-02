@@ -79,10 +79,12 @@ public class User {
 
 	public boolean removeActive(Car car) {
 		for (Car obj : actuallist) {
-			if (obj.getPlate().equals(car.getPlate()) {
-				actuallist.remove(index)
+			if (obj.getPlate().equals(car.getPlate())) {
+				actuallist.remove(car);
+				return true;
 			}
 		}
+		return false;
 	}
 
 	public ArrayList<Car> getActive() {
@@ -93,8 +95,10 @@ public class User {
 		System.out.println("--DADOS DO USUARIO--");
 		System.out.println("Nome: "+this.name + " CPF: "+this.cpf);
 		System.out.println("--LISTA DE ATIVOS--");
-		for (Car car : actuallist) {
-			for (int i = 0; i < actuallist.size(); i++) {
+		if (actuallist.size() == 0) {
+			System.out.println("Nenhum carro ativo");
+		} else {
+			for (Car car : actuallist) {
 				car.printCar();
 			}
 		}

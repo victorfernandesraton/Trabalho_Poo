@@ -36,6 +36,9 @@ public class Store {
 		for (Rent obj : rentList) {
 			if (obj.equals(rent)) {
 				obj.setEnd();
+				for(User obj2 : userList) {
+					obj2.removeActive(searchPlate(obj.getCarPlate()));
+				}
 				return true;			
 			}
 		}
@@ -77,6 +80,11 @@ public class Store {
 					for (Car obj2 : carList) {
 						if (obj2.getPlate().equals(tmpRent.getCarPlate())) {
 							obj2.changeStatus();
+							for (User user : userList) {
+								if (user.getCpf().equals(obj.getUserCpf())) {
+									user.addActive(obj2);
+								}
+							}
 							return true;
 						}
 					}
@@ -89,6 +97,11 @@ public class Store {
 					for (Car obj2 : carList) {
 						if (obj2.getStatus() && obj2.compareCar(searchPlate(obj.getCarPlate()))) {
 							obj.SetCarPlate(obj2);
+							for (User user : userList) {
+								if (user.getCpf().equals(obj.getUserCpf())) {
+									user.addActive(obj2);
+								}
+							}
 							obj2.changeStatus();
 							return true;
 						}
@@ -118,7 +131,7 @@ public class Store {
 		double aux = 0;
 		for (Rent obj : rentList) {
 			if (obj.getUserCpf().equals(cpf) && obj.getStatus().equals("Encerrado")) {
-				aux++;
+				aux += obj.rentCoast();
 			}
 		}
 		return aux;
@@ -130,7 +143,7 @@ public class Store {
 		for (User obj : userList) {
 			if (obj.getCpf().equals(cpf)) {
 				obj.userPrint();
-				System.out.println("O total dos alugueis é:"+ rentTotalCoast(obj));
+				System.out.println("O custo total dos alugueis é:"+ rentTotalCoast(obj));
 				System.out.println("total de carros básicos alugados "+totalRentSameCategory(obj.getCpf(), "Básico"));
 				System.out.println("total de carros luxo alugados "+totalRentSameCategory(obj.getCpf(), "Luxo"));
 				System.out.println("total de carros superluxo alugados "+totalRentSameCategory(obj.getCpf(), "Superluxo"));

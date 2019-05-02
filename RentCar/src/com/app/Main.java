@@ -2,30 +2,29 @@ package com.app;
 
 public class Main {
 	public static void main(String[] args) {
-		Car[] car = new Car[100];
-		User[] user = new User[2];
-		Rent[] rent = new Rent[100];
-		user[0] = new User("Victor","862288875-48", "vfbr@gmail.com", "999278378");
-		user[1] = new User("Paulo","8478375", "vfbr@gmail.com", "999278378");
-		car[0] = new Car("Uno com escada","VFB 1271" , "Branco gelo", "Superluxo", 1993);
-		car[1] = new Car("Uno com escada","VFB 1201" , "Branco gelo", "Superluxo", 1993);
-		rent[0] = new Rent(car[0], user[0]);
-		rent[1] = new Rent(car[0],user[1]);
+		// criaodo loja
 		Store store = new Store("teste");
-		System.out.println("Add user "+store.AddUser(user[0]));
-		System.out.println("Add user "+store.AddUser(user[1]));
-		store.AddCar(car[0]);
-		store.AddCar(car[1]);
-		store.addRent(rent[0]);
-		store.addRent(rent[1]);
-		System.out.println(store.getCarList().get(0).getStatus());
-		System.out.println("alugar"+store.pickCar(store.getRentList().get(0)));
-		System.out.println("alugar"+store.pickCar(store.getRentList().get(1)));
-		System.out.println(store.getCarList().get(0).getStatus());
-		System.out.println(store.getCarList().get(1).getStatus());
-		System.out.println(store.getRentList().get(0).getCarPlate());
-		System.out.println(store.getRentList().get(1).getCarPlate());
-		System.out.println(store.searchCpf("862288875-48").getCpf());
+		// adicionando usuários a lista de cliente da loja
+		System.out.println("Add user: "+ store.AddUser( new User("Victor","862288875-48", "vfbr@gmail.com", "999278378")));
+		System.out.println("Add user: "+ store.AddUser( new User("Ana","121212", "ana@unifacs.edu.br", "0000")));
+		// adicionando carros á loja
+		System.out.println("Add car Uno: "+ store.AddCar( new Car("Uno com escada","VFB 1291" , "Branco gelo", "Superluxo", 1993)));
+		System.out.println("Add car gol: "+store.AddCar( new Car("gol","VFB 1271" , "Branco gelo", "Superluxo", 1993)));
+		// gerando pedidos
+		System.out.println("usuário Victor pede uno "+ store.addRent(new Rent(store.searchPlate("VFB 1291"),store.searchCpf("862288875-48"))));		
+		System.out.println("usuário Ana pede uno "+ store.addRent(new Rent(store.searchPlate("VFB 1291"),store.searchCpf("121212"))));
+		// retira o automóvel e inicia a cobrança
+		System.out.println("usuário Victor retira carro "+ store.pickCar(store.searchUniqueRent("862288875-48", "VFB 1291")));
+		// como victor retirou o carro ana irá pegar um outro carro similar
+		System.out.println("usuário Ana retira carro "+ store.pickCar(store.searchUniqueRent("121212", "VFB 1291")));
+		// imprime os dados de victor e de ana
 		store.userDataPrint(store.searchCpf("862288875-48"));
+		store.userDataPrint(store.searchCpf("121212"));
+		// victor entrega o carro que está em sua mão
+		store.endRent(store.searchUniqueRent("862288875-48","VFB 1291"));
+		/// imprime os dados de victor e de ana de novo
+		store.userDataPrint(store.searchCpf("862288875-48"));
+		store.userDataPrint(store.searchCpf("121212"));
+
 	}
 }
