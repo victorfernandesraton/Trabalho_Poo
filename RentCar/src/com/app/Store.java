@@ -99,7 +99,7 @@ public class Store {
 		return false;
 	}
 
-	public double totalRent(String cpf, String category) {
+	public double totalRentSameCategory(String cpf, String category) {
 		int total = 0;
 		for (Rent obj : rentList) {
 			if (obj.getUserCpf().equals(cpf)) {
@@ -124,15 +124,17 @@ public class Store {
 	}
 
 	public void userDataPrint(String cpf) {
-		for (int i = 0; i < userList.size(); i++) {
-			userList.get(i).userPrint();
+		for (User obj : userList) {
+			if (obj.getCpf().equals(cpf)) {
+				obj.userPrint();
+			}
 		}
-		for (int i = 0; i < rentList.size(); i++) {
-			if (rentList.get(i).getUserCpf().equals(cpf)) {
-				rentList.get(i).printRent();
-				for (Car car: carList) {
-					if (rentList.get(i).getCarPlate().equals(car.getPlate())) {
-						car.printCar();
+		for (Rent obj :rentList) {
+			if (obj.getUserCpf().equals(cpf)) {
+				obj.printRent();
+				for (Car obj2 : carList) {
+					if (obj2.getPlate().equals(obj.getCarPlate())) {
+						obj2.printCar();
 					}
 				}
 			}
