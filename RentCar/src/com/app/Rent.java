@@ -20,7 +20,8 @@ public class Rent {
 		this.userCpf = user.getCpf();
 		this.userName = user.getName();
 		this.total = car.getPrice();
-		this.datastart = Calendar.getInstance();
+		this.datastart = null;
+		this.dataend = null;
 	}
 
 	public Rent(Car car, String id, User user, String status) {
@@ -32,6 +33,7 @@ public class Rent {
 	}
 
 	public void initRent() {
+		this.datastart = Calendar.getInstance();
 		this.status = "Pedidio retiraro";
 	}
 

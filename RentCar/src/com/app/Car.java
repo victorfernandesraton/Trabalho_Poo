@@ -91,7 +91,7 @@ public class Car {
 	}
 
 	public boolean compareCar(Car car) {
-		if (car.getStatus() == this.status && car.getYmake() >= this.ymake) {
+		if (car.getCategory().equals(category) && car.getYmake() >= this.ymake) {
 			return true;
 		} else return false;
 	}

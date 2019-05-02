@@ -40,6 +40,16 @@ public class Store {
 		} else return false;
 	}
 
+	public boolean endRent(Rent rent) {
+		for (Rent obj : rentList) {
+			if (obj.equals(rent)) {
+				obj.setEnd();
+				return true;			
+			}
+		}
+		return false;
+	}
+
 	public Rent[] searchRent(String cpf) {
 		Rent[] tempRents;
 		int index = 0;
@@ -55,28 +65,47 @@ public class Store {
 		} else return tempRents;
 	}
 
-	public boolean pickCar(Rent rent) {
-		for(Rent list: rentList) {
-			if (rent.equals(list)) {
-				for(Car car: carList) {
-					if (car.getPlate().equals(list.getCarPlate()) && car.getStatus()) {
-						if (car.getPlate().equals(rent.getCarPlate())) {
-							car.changeStatus();
-							list.setStatus("Carro retirado");
-							System.out.println("Busca interna");
+	public Rent searchUniqueRent(String cpf, String plate) {
+		for (Rent obj :rentList) {
+			if (obj.getCarPlate().equals(plate) && obj.getUserCpf().equals(cpf)) {
+				return obj;
+			}
+		}
+		return null;
+	}
+
+	public Car carCompative(Car car) {
+		for (Car obj : carList) {
+			if (obj.compareCar(car)) {
+				return obj;
+			}
+		}
+		return null;
+	}
+
+	public boolean pickCar(Rent tmpRent) {
+		if (searchPlate(tmpRent.getCarPlate()).getStatus()) {
+			for (Rent obj : rentList) {
+				if (tmpRent.equals(obj)) {
+					obj.initRent();
+					for (Car obj2 : carList) {
+						if (obj2.getPlate().equals(tmpRent.getCarPlate())) {
+							obj2.changeStatus();
 							return true;
 						}
 					}
 				}
-			} else {
-				System.out.println("Busca externa");
-				for (Car car2: carList) {
-					if (car2.getStatus() && searchPlate(rent.getCarPlate()).compareCar(car2)) {
-						System.out.println(car2.getPlate());
-						rent.setCarPlate(car2.getPlate());
-							car2.changeStatus();
-							rent.setStatus("Carro retirado");
-							return false;
+			}
+		} else {
+			for (Rent obj : rentList) {
+				if (tmpRent.equals(obj)) {
+					obj.initRent();
+					for (Car obj2 : carList) {
+						if (obj2.getStatus() && obj2.compareCar(searchPlate(obj.getCarPlate()))) {
+							obj.SetCarPlate(obj2);
+							obj2.changeStatus();
+							return true;
+						}
 					}
 				}
 			}
@@ -84,21 +113,18 @@ public class Store {
 		return false;
 	}
 
-	public boolean endRent(Rent rent) {
-		for (Rent rents: rentList) {
-			if (rents.equals(rent)) {
-				for (Car car: searchCpf(rent.getUserCpf()).getActive()) {
-					if (car.equals(searchPlate(rent.getCarPlate()))) {
-						// remove o carro dos ativos do usuário
-						searchCpf(rent.getUserCpf()).getActive().remove(searchPlate(rent.getCarPlate()));
+	public double totalRent(String cpf, String category) {
+		int total = 0;
+		for (Rent obj : rentList) {
+			if (obj.getUserCpf().equals(cpf)) {
+				for (Car obj2 : carList) {
+					if (obj2.getPlate().equals(obj.getCarPlate()) && obj2.getCategory().equals(category)) {
+						total++;
 					}
 				}
-				rents.setEnd();
-				history.add(rents);
-				return true;
 			}
 		}
-		return false;
+		return total;
 	}
 
 	public void searchCategoryfull(User user, String category ) {
