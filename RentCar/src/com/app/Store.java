@@ -129,24 +129,13 @@ public class Store {
 		return total;
 	}
 
-	public double rentTotalCoast(User user) {
-		String cpf = user.getCpf();
-		double aux = 0;
-		for (Rent obj : rentList) {
-			if (obj.getUserCpf().equals(cpf) && obj.getStatus().equals("Encerrado")) {
-				aux += obj.rentCoast();
-			}
-		}
-		return aux;
-	}
-
 	public void userDataPrint(User user) {
 		String cpf = user.getCpf();
 		System.out.println(cpf);
 		for (User obj : userList) {
 			if (obj.getCpf().equals(cpf)) {
 				obj.userPrint();
-				System.out.println("O custo total dos alugueis é:"+ rentTotalCoast(obj));
+				System.out.println("O custo total dos alugueis é:"+ obj.getDebit());
 				System.out.println("total de carros básicos alugados "+totalRentSameCategory(obj.getCpf(), "Básico"));
 				System.out.println("total de carros luxo alugados "+totalRentSameCategory(obj.getCpf(), "Luxo"));
 				System.out.println("total de carros superluxo alugados "+totalRentSameCategory(obj.getCpf(), "Superluxo"));

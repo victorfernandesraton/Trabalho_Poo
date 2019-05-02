@@ -46,7 +46,7 @@ __R:__ Na classe User, método getDebit
 
 ### Construir métodos necessários para saber, dada uma categoria, quantos automóveis desta categoria um cliente já locou até hoje.  
 
-__R:__ Na classe Store, método searchCategoryfull  
+__R:__ Na classe Store, método totalSameCategory  
 
 ### Construir os métodos necessários para imprimir os dados de um cliente. Neste caso deve ser impresso todos os dados do cliente (cpf, nome, telefone e email) e todos os dados das locações realizadas pelo cliente (data de inicio, data de término, modelo do automóvel locado, placa do automóvel locado e valor total da locação).  
 
