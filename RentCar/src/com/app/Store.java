@@ -6,14 +6,40 @@ public class Store {
 	private ArrayList<Car> carList;
 	private ArrayList<User> userList;
 	private ArrayList<Rent> rentList;
-	private ArrayList<Rent> history;
 
 	public Store(String name) {
 		this.name = name;
 		this.carList = new ArrayList<Car>();
 		this.rentList = new ArrayList<Rent>();
-		this.history = new ArrayList<Rent>();
 		this.userList = new ArrayList<User>();
+	}
+
+	public boolean AddUser(User user) {
+		if (userList.add(user)) {
+			return true;
+		} else return false;
+	}
+
+	public boolean AddCar(Car car) {
+		if (carList.add(car)) {
+			return true;
+		} else return false;
+	}
+
+	public boolean addRent(Rent rent) {
+		if (rentList.add(rent)) {
+			return true;
+		} else return false;
+	}
+
+	public boolean endRent(Rent rent) {
+		for (Rent obj : rentList) {
+			if (obj.equals(rent)) {
+				obj.setEnd();
+				return true;			
+			}
+		}
+		return false;
 	}
 
 	public User searchCpf(String cpf) {
@@ -34,49 +60,9 @@ public class Store {
 		return null;
 	}
 
-	public boolean addRent(Rent rent) {
-		if (rentList.add(rent) && history.add(rent)) {
-			return true;
-		} else return false;
-	}
-
-	public boolean endRent(Rent rent) {
-		for (Rent obj : rentList) {
-			if (obj.equals(rent)) {
-				obj.setEnd();
-				return true;			
-			}
-		}
-		return false;
-	}
-
-	public Rent[] searchRent(String cpf) {
-		Rent[] tempRents;
-		int index = 0;
-		tempRents = new Rent[history.size()];
-		for (Rent rent : history) {
-			if (rent.getUserCpf().equals(cpf)) {
-				tempRents[index] = rent;
-				index++;
-			}
-		}
-		if (index == 0) {
-			return null;
-		} else return tempRents;
-	}
-
 	public Rent searchUniqueRent(String cpf, String plate) {
 		for (Rent obj :rentList) {
 			if (obj.getCarPlate().equals(plate) && obj.getUserCpf().equals(cpf)) {
-				return obj;
-			}
-		}
-		return null;
-	}
-
-	public Car carCompative(Car car) {
-		for (Car obj : carList) {
-			if (obj.compareCar(car)) {
 				return obj;
 			}
 		}
@@ -127,65 +113,30 @@ public class Store {
 		return total;
 	}
 
-	public void searchCategoryfull(User user, String category ) {
-		int aux = 0;
-		if (searchRent(user.getCpf()) != null) {
-			for(int i = 0; i < searchRent(user.getCpf()).length; i++) {
-				if (searchRent(user.getCpf())[i] != null && searchPlate(searchRent(user.getCpf())[i].getCarPlate()).getCategory().equals(category) && searchRent(user.getCpf())[i].getStatus().equals("Carro retirado")) {
-					aux++;
-				}
-			} System.out.println("O cliente "+user.getName()+ " alugou  "+ aux + " carros da categoria "+ category);
-		} else System.out.println("Lista vazia, busca não resultou em nada");
-	}
-
 	public double rentTotalCoast(String cpf) {
 		double aux = 0;
-		if (searchRent(cpf) != null) {
-			for (int i = 0; i < searchRent(cpf).length; i++) {
-				if (searchRent(cpf)[i].getStatus().equals("Encerrado")) {
-					aux += searchRent(cpf)[i].rentCoast();
-				}
+		for (Rent obj : rentList) {
+			if (obj.getUserCpf().equals(cpf) && obj.getStatus().equals("Encerrado")) {
+				aux++;
 			}
 		}
-		if (aux == 0) {
-			System.out.println("Não houve registro");
-			return 0;
-		} else return aux;
+		return aux;
 	}
 
 	public void userDataPrint(String cpf) {
 		for (int i = 0; i < userList.size(); i++) {
 			userList.get(i).userPrint();
 		}
-		for (int i = 0; i < history.size(); i++) {
-			if (history.get(i).getUserCpf().equals(cpf))
-				history.get(i).printRent();
-					for (Car car: carList) {
-						if (history.get(i).getCarPlate().equals(car.getPlate())) {
+		for (int i = 0; i < rentList.size(); i++) {
+			if (rentList.get(i).getUserCpf().equals(cpf)) {
+				rentList.get(i).printRent();
+				for (Car car: carList) {
+					if (rentList.get(i).getCarPlate().equals(car.getPlate())) {
 						car.printCar();
 					}
 				}
 			}
 		}
-
-	public boolean AddUser(User user) {
-		if (userList.add(user)) {
-			return true;
-		} else return false;
-	}
-
-	public boolean AddCar(Car car) {
-		if (carList.add(car)) {
-			return true;
-		} else return false;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public ArrayList<User> getUserList() {
@@ -200,7 +151,11 @@ public class Store {
 		return rentList;
 	}
 
-	public ArrayList<Rent> getHistory() {
-		return rentList;
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }
