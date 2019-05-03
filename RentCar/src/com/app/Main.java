@@ -25,6 +25,5 @@ public class Main {
 		/// imprime os dados de victor e de ana de novo
 		store.userDataPrint(store.searchCpf("862288875-48"));
 		store.userDataPrint(store.searchCpf("121212"));
-
 	}
 }
