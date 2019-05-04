@@ -19,6 +19,9 @@ import java.awt.FlowLayout;
 import javax.swing.JLabel;
 import java.awt.Component;
 import javax.swing.Box;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class myFrame extends JFrame {
 
@@ -48,13 +51,26 @@ public class myFrame extends JFrame {
 		tabbedPane.setBounds(0, 0, 434, 261);
 		getContentPane().add(tabbedPane);
 		
-		JPanel panel = new JPanel();
-		tabbedPane.addTab("New tab", null, panel, null);
+		JPanel panel1 = new JPanel();
+		tabbedPane.addTab("New tab", null, panel1, null);
+		panel1.setLayout(null);
 		
-		JPanel panel_1 = new JPanel();
-		tabbedPane.addTab("New tab", null, panel_1, null);
+		JButton btnNewButton = new JButton("Cadastrar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(301, 183, 89, 23);
+		panel1.add(btnNewButton);
 		
-		JPanel panel_2 = new JPanel();
-		tabbedPane.addTab("New tab", null, panel_2, null);
+		JButton btnNewButton_1 = new JButton("Cancelar");
+		btnNewButton_1.setBounds(202, 183, 89, 23);
+		panel1.add(btnNewButton_1);
+		
+		JPanel panel2 = new JPanel();
+		tabbedPane.addTab("New tab", null, panel2, null);
+		
+		JPanel panel3 = new JPanel();
+		tabbedPane.addTab("New tab", null, panel3, null);
 	}
 }
