@@ -31,7 +31,13 @@
     </treeState>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fba8a99-d048-4d1a-aaca-942fdaf7a866" name="Default Changelist" comment="" />
+    <list default="true" id="3fba8a99-d048-4d1a-aaca-942fdaf7a866" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCar_Interface/out/production/rent/com/app/myFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RentCar_Interface/src/com/app/myFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RentCar_Interface/src/com/app/myFrame.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/app/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="99">
+              <caret line="103" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#783#784#0" expanded="true" />
                 <element signature="e#808#809#0" expanded="true" />
@@ -202,11 +208,11 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="177" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="right" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RentCar_Interface" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -347,9 +353,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="24" width="1382" height="752" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2723112" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27765065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" weight="0.32952815" />
@@ -367,7 +372,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4968051" weight="0.34060404" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159746" side_tool="true" weight="0.39968154" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159746" side_tool="true" visible="true" weight="0.39932886" />
       <window_info anchor="bottom" content_ui="combo" id="Version Control" order="9" weight="0.32718122" />
       <window_info anchor="bottom" id="JRebel Executor" order="10" />
       <window_info anchor="bottom" id="Flutter Performance" order="11" side_tool="true" />
@@ -434,7 +439,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
       <path value="$PROJECT_DIR$/../../../.." />
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -508,6 +512,19 @@
     <entry file="file://$PROJECT_DIR$/src/com/app/teste.form" />
     <entry file="file://$PROJECT_DIR$/src/com/app/y.java" />
     <entry file="file://$PROJECT_DIR$/src/com/app/y.form" />
+    <entry file="file://$PROJECT_DIR$/src/com/app/myInterface.form" />
+    <entry file="file://$PROJECT_DIR$/src/com/app/myInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/app/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
+          <folding>
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -521,27 +538,6 @@
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/myInterface.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/myInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/app/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
           </folding>
         </state>
       </provider>

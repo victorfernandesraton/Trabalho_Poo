@@ -22,8 +22,19 @@ import javax.swing.Box;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
 
 public class myFrame extends JFrame {
+
+	private JPanel panel1;
+	private JTabbedPane tabbedPane1;
+	private JButton button1;
+	private JButton button2;
+	private JTextField textField1;
+	private JTextField textField2;
+	private JTextField textField3;
+	private JPanel panel2;
+	private JTextField textField4;
 
 	/**
 	 * Launch the application.
@@ -55,22 +66,37 @@ public class myFrame extends JFrame {
 		tabbedPane.addTab("New tab", null, panel1, null);
 		panel1.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Cadastrar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBounds(301, 183, 89, 23);
-		panel1.add(btnNewButton);
+		JButton jButton_cadastrar = new JButton("Cadastrar");
+
+		jButton_cadastrar.setBounds(301, 183, 89, 23);
+		panel1.add(jButton_cadastrar);
 		
-		JButton btnNewButton_1 = new JButton("Cancelar");
-		btnNewButton_1.setBounds(202, 183, 89, 23);
-		panel1.add(btnNewButton_1);
+		JButton jButton_Cancelar = new JButton("Cancelar");
+		jButton_Cancelar.setBounds(202, 183, 89, 23);
+		panel1.add(jButton_Cancelar);
+		
+		JLabel jLabel_placa = new JLabel("Placa");
+		jLabel_placa.setBounds(10, 11, 46, 14);
+		panel1.add(jLabel_placa);
+		
+		JTextPane jTextPanel_placa = new JTextPane();
+		jTextPanel_placa.setBounds(10, 36, 189, 20);
+		panel1.add(jTextPanel_placa);
 		
 		JPanel panel2 = new JPanel();
 		tabbedPane.addTab("New tab", null, panel2, null);
 		
 		JPanel panel3 = new JPanel();
 		tabbedPane.addTab("New tab", null, panel3, null);
+		jButton_Cancelar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+	}
+
+	private void createUIComponents() {
+		// TODO: place custom component creation code here
 	}
 }
