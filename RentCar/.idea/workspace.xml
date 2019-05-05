@@ -32,6 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fba8a99-d048-4d1a-aaca-942fdaf7a866" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/app/myInterface.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/myInterface.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/app/myInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/app/myInterface.java" afterDir="false" />
     </list>
@@ -53,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/app/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="2291">
               <caret line="109" selection-start-line="109" selection-end-line="109" />
               <folding>
                 <element signature="e#783#784#0" expanded="true" />
@@ -154,82 +155,14 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="Trabalho" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="rent" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Problems'; set:Problems; class com.intellij.psi.search.scope.ProblemsScope">
-          <expand>
-            <path>
-              <item name="Trabalho" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="rent" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Trabalho" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="rent" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Trabalho" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="rent" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Trabalho" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="rent" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RentCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RentCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RentCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RentCar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RentCar" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="myInterface" type="e9f4de52:FormNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="177" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="right" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="315" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -370,7 +303,28 @@
       <option name="project" value="LOCAL" />
       <updated>1557068995287</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="interface: usuário cadastro">
+      <created>1557069477524</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1557069477524</updated>
+    </task>
+    <task id="LOCAL-00015" summary="interface: carro cadastro">
+      <created>1557070409726</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557070409726</updated>
+    </task>
+    <task id="LOCAL-00016" summary="interface: carro cadastro + geral">
+      <created>1557070650492</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1557070650492</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -483,7 +437,10 @@
     <MESSAGE value="final: diagrama - Pendente métodos: Rent e Store" />
     <MESSAGE value="final: diagrama - Pendente métodos: Rent (const) e Store" />
     <MESSAGE value="interface: criação" />
-    <option name="LAST_COMMIT_MESSAGE" value="interface: criação" />
+    <MESSAGE value="interface: usuário cadastro" />
+    <MESSAGE value="interface: carro cadastro" />
+    <MESSAGE value="interface: carro cadastro + geral" />
+    <option name="LAST_COMMIT_MESSAGE" value="interface: carro cadastro + geral" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -547,7 +504,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/app/y.form" />
     <entry file="file://$PROJECT_DIR$/src/com/app/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="2291">
           <caret line="109" selection-start-line="109" selection-end-line="109" />
           <folding>
             <element signature="e#783#784#0" expanded="true" />
