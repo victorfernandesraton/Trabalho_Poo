@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.app.myInterface">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="774" height="400"/>
+      <xy x="20" y="20" width="949" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -12,7 +12,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="a4a96" binding="panel2" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="20" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="a4a96" binding="tb_usuário" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="20" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Usuário"/>
@@ -84,7 +84,7 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="8eba" class="javax.swing.JButton" binding="btRegistery" custom-create="true">
+              <component id="8eba" class="javax.swing.JButton" binding="btRegistery_User" custom-create="true">
                 <constraints>
                   <grid row="3" column="19" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -97,7 +97,7 @@
                   <grid row="3" column="0" row-span="1" col-span="15" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
               </hspacer>
-              <component id="acddb" class="javax.swing.JButton" binding="btCancel">
+              <component id="acddb" class="javax.swing.JButton" binding="btCancel_User">
                 <constraints>
                   <grid row="3" column="16" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -162,13 +162,215 @@
               </hspacer>
             </children>
           </grid>
-          <grid id="8230d" binding="panel3" custom-create="true" layout-manager="GridBagLayout">
+          <grid id="8230d" binding="tb_Carro" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="16" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <tabbedpane title="Untitled"/>
+              <tabbedpane title="Carro"/>
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <vspacer id="2c2cd">
+                <constraints>
+                  <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="65057" class="javax.swing.JLabel" binding="corLabel" custom-create="true">
+                <constraints>
+                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Cor"/>
+                </properties>
+              </component>
+              <component id="22f01" class="javax.swing.JTextField" binding="textFieldColorCar">
+                <constraints>
+                  <grid row="0" column="11" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="f3006" class="javax.swing.JTextField" binding="textFieldModelCar">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="d22f2" class="javax.swing.JLabel" binding="modeloLabel" custom-create="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Modelo"/>
+                </properties>
+              </component>
+              <component id="504f3" class="javax.swing.JLabel" binding="placaLabel" custom-create="true">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Placa"/>
+                </properties>
+              </component>
+              <component id="6a49" class="javax.swing.JLabel" binding="categoriaLabel" custom-create="true">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Categoria"/>
+                </properties>
+              </component>
+              <hspacer id="a75d8">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="11" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="19a2c">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="ccf3d">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="54f98">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="4e10">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="dbab9">
+                <constraints>
+                  <grid row="1" column="6" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="e9484">
+                <constraints>
+                  <grid row="0" column="13" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="be996" class="javax.swing.JButton" binding="btRegisteryCar" custom-create="true">
+                <constraints>
+                  <grid row="3" column="14" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Registrar"/>
+                </properties>
+              </component>
+              <hspacer id="f017a">
+                <constraints>
+                  <grid row="3" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="fdbac" class="javax.swing.JTextField" binding="textFieldPlateCar">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="eadb3" class="javax.swing.JLabel" binding="anoDeFabricaçãoLabel" custom-create="true">
+                <constraints>
+                  <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Ano de fabricação"/>
+                </properties>
+              </component>
+              <component id="65da7" class="javax.swing.JComboBox" binding="comboBoxYFactoryCar">
+                <constraints>
+                  <grid row="1" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <hspacer id="afbca">
+                <constraints>
+                  <grid row="1" column="12" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="62f00" class="javax.swing.JComboBox" binding="comboBoxCategoryCar">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <hspacer id="d4002">
+                <constraints>
+                  <grid row="2" column="6" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="4b888" class="javax.swing.JTextField" binding="textFieldDayPriceCar">
+                <constraints>
+                  <grid row="2" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="903c6" class="javax.swing.JLabel" binding="diáriaLabel" custom-create="true">
+                <constraints>
+                  <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Diária"/>
+                </properties>
+              </component>
+              <hspacer id="d87b">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="1d23a">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="d2e3d">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="391bb">
+                <constraints>
+                  <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="40b70">
+                <constraints>
+                  <grid row="1" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="ee8c3">
+                <constraints>
+                  <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="3ad45">
+                <constraints>
+                  <grid row="2" column="12" row-span="1" col-span="4" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="55e8f" class="javax.swing.JButton" binding="btCancelCar" custom-create="true">
+                <constraints>
+                  <grid row="3" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Cancelar"/>
+                </properties>
+              </component>
+            </children>
           </grid>
           <grid id="b6e12" binding="panel4" custom-create="true" layout-manager="GridBagLayout">
             <constraints>
