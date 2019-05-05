@@ -7,12 +7,12 @@
     <properties/>
     <border type="none"/>
     <children>
-      <tabbedpane id="95b3f" binding="tabbedPane1" custom-create="true" default-binding="true">
+      <tabbedpane id="95b3f" binding="tbAluguel" custom-create="true">
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="a4a96" binding="tb_usuário" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="20" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="a4a96" binding="tbusuário" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="20" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Usuário"/>
@@ -162,7 +162,7 @@
               </hspacer>
             </children>
           </grid>
-          <grid id="8230d" binding="tb_Carro" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="16" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="8230d" binding="tbCarro" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="16" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Carro"/>
@@ -372,17 +372,17 @@
               </component>
             </children>
           </grid>
-          <grid id="b6e12" binding="panel4" custom-create="true" layout-manager="GridBagLayout">
+          <grid id="b6e12" binding="tbRent" custom-create="true" layout-manager="GridBagLayout">
             <constraints>
-              <tabbedpane title="Untitled"/>
+              <tabbedpane title="Aluguel"/>
             </constraints>
             <properties/>
             <border type="none"/>
             <children/>
           </grid>
-          <grid id="4c265" binding="panel5" custom-create="true" layout-manager="GridBagLayout">
+          <grid id="4c265" binding="tbGeral" custom-create="true" layout-manager="GridBagLayout">
             <constraints>
-              <tabbedpane title="Untitled"/>
+              <tabbedpane title="Geral"/>
             </constraints>
             <properties/>
             <border type="none"/>
