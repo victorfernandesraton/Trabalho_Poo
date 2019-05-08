@@ -96,7 +96,7 @@ public class Car {
 			return true;
 		} else return false;
 	}
-
+//
 	public void printCar() {
 		System.out.println("Modelo: "+this.model + " Placa :"+this.plate);
 		System.out.println("Categoria"+this.category);
