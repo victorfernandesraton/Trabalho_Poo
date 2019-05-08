@@ -6,13 +6,22 @@ public class Store {
 	private ArrayList<Car> carList;
 	private ArrayList<User> userList;
 	private ArrayList<Rent> rentList;
+	private ArrayList<Category> categoryList;
 
 	public Store(String name) {
 		this.name = name;
 		this.carList = new ArrayList<Car>();
 		this.rentList = new ArrayList<Rent>();
 		this.userList = new ArrayList<User>();
+		this.categoryList = new ArrayList<Category>();
 	}
+	
+	public boolean addCategory(Category category)  {
+		if (categoryList.add(category)) {
+			return true;
+		} else return false;
+	}
+	
 
 	public boolean AddUser(User user) {
 		if (userList.add(user)) {

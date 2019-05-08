@@ -9,22 +9,17 @@ public class Car {
 
 	// sobrecarga
 	public Car(String model, String plate,String color, int ymake) {
-		this(model,plate,color,"Básico",ymake);
+		this(model,plate,color,new Category("ásica",130),ymake);
 	}
 
 	// construtor
-	public Car(String model, String plate,String color, String category, int ymake) {
+	public Car(String model, String plate,String color, Category category, int ymake) {
 		this.model = model;
 		this.color = color;
 		this.plate = plate;
-		this.category =  category;
+		this.category =  category.getName();
 		this.ymake = ymake;
-		 if (category == "Luxo") {
-			this.price = 160;
-		} else if (category == "Superluxo") {
-			this.price = 210;
-		} else this.price = 120;
-		 this.status = true;
+		this.price = category.getPrice();
 	}
 
 	// gettters & setters
