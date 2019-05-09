@@ -230,10 +230,8 @@ public class myInterface {
 		tfPhoneUser.setColumns(10);
 		
 		btnClearUser.addActionListener( new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				tfNameUser.setText("");
 				tfCPFUser.setText("");
 				tfMailAdressUser.setText("");
@@ -243,7 +241,6 @@ public class myInterface {
 		});
 		
 		btnCancelUser.addActionListener( new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
@@ -254,6 +251,7 @@ public class myInterface {
 		});
 		
 		btnConfirmUser.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO
 				tmpUser = new User(tfNameUser.getText(),tfCPFUser.getText(),tfMailAdressUser.getText() + "@"+tfMailDomainUser.getText(),tfPhoneUser.getText());
@@ -281,10 +279,11 @@ public class myInterface {
 			}
 		});
 		
-		tfNameStore.addKeyListener(new KeyAdapter() {
-			public void keyReleased(KeyEvent e) {
-		        tfNameStore = (JTextField) e.getSource();
-		        String text = tfNameStore.getText();
+		tfNameStore.addKeyListener(new KeyAdapter() { // cria o evento de digitação 
+			@Override
+			public void keyReleased(KeyEvent e) { // pega o evento 
+		        tfNameStore = (JTextField) e.getSource(); // pega po código do evento
+		        String text = tfNameStore.getText(); // faz um breve save do text para usar dps
 		        tfNameStore.setText(text.toUpperCase());
 		        if (!(tfNameStore.getText().equals(""))) {		        	
 		        	btnConfirmStore.setEnabled(true);
@@ -293,7 +292,42 @@ public class myInterface {
 		});
 		
 		tfNameUser.addKeyListener(new KeyAdapter() {
-			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				tfNameUser = (JTextField) e.getSource();
+				String text = tfNameUser.getText();
+				tfNameUser.setText(text.toUpperCase());
+				if (tfNameUser.getText().equals("")) {
+					btnConfirmUser.setEnabled(false);
+				} else btnConfirmUser.setEnabled(true);
+			}
 		});
+		
+		tfCPFUser.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				tfCPFUser = (JTextField) e.getSource();
+				String text = tfCPFUser.getText();
+				tfCPFUser.setText(text.toUpperCase());
+				if (tfCPFUser.getText().equals("")) {
+					btnConfirmUser.setEnabled(false);
+				} else btnConfirmUser.setEnabled(true);
+			}
+		});
+		
+		tfMailAdressUser.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				tfMailAdressUser = (JTextField) e.getSource();
+				String text = tfMailAdressUser.getText();
+				tfMailAdressUser.setText(text.toUpperCase());
+				if (tfMailDomainUser.getText().equals("")) {
+					btnConfirmUser.setEnabled(false);
+				} else btnConfirmUser.setEnabled(true);
+			}
+		});
+		
+		
+		
 	}
 }
