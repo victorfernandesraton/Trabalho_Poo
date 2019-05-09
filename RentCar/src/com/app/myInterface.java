@@ -21,13 +21,21 @@ import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import java.awt.GridLayout;
 import javax.swing.BoxLayout;
-import net.miginfocom.swing.MigLayout;
 import javax.swing.SpringLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 public class myInterface {
 
+	private JFrame frame;
+	private JTabbedPane tbPanels;
+	private JPanel pnUser, pnStore;
+	private JButton btnCancelUser, btnClearUser, btnConfirmUser, btnCancelStore, btnConfirmStore;
+	private JLabel lbName, lbCPF,lbMail, lbMailArroba,lbPhone;
+	private JTextField tfNameUser, tfCPFUser, tfMailAdressUser, tfMailDomainUser, tfPhoneUser, tfNameStore;
+	private Store str;
+	private User tmpUser;
+	
 	public JPanel getPnUser() {
 		return pnUser;
 	}
@@ -37,15 +45,15 @@ public class myInterface {
 	}
 
 	public JButton getBtnCancel() {
-		return btnCancel;
+		return btnCancelUser;
 	}
 
 	public JButton getBtnClear() {
-		return btnClear;
+		return btnClearUser;
 	}
 
 	public JButton getBtnConfirm() {
-		return btnConfirm;
+		return btnConfirmUser;
 	}
 
 	public JLabel getLbName() {
@@ -53,7 +61,7 @@ public class myInterface {
 	}
 
 	public JTextField getTfName() {
-		return tfName;
+		return tfNameUser;
 	}
 
 	public JLabel getLbCPF() {
@@ -61,7 +69,7 @@ public class myInterface {
 	}
 
 	public JTextField getTfCPF() {
-		return tfCPF;
+		return tfCPFUser;
 	}
 
 	public JLabel getLbMail() {
@@ -73,29 +81,22 @@ public class myInterface {
 	}
 
 	public JTextField getTfMailAdress() {
-		return tfMailAdress;
+		return tfMailAdressUser;
 	}
 
 	public JTextField getTfMailDomain() {
-		return tfMailDomain;
+		return tfMailDomainUser;
 	}
 
 	public JTextField getTfPhone() {
-		return tfPhone;
+		return tfPhoneUser;
 	}
 
 	public JLabel getLbPhone() {
 		return lbPhone;
 	}
 
-	private JFrame frame;
-	private JTabbedPane tbPanels;
-	private JPanel pnUser, pnStore;
-	private JButton btnCancel, btnClear, btnConfirm, btnCancelStore, btnConfirmStore;
-	private JLabel lbName, lbCPF,lbMail, lbMailArroba,lbPhone;
-	private JTextField tfName, tfCPF, tfMailAdress, tfMailDomain, tfPhone, tfNameStore;
-	private Store str;
-	private User tmpUser;
+
 	/**
 	 * Launch the application.
 	 */
@@ -170,94 +171,94 @@ public class myInterface {
 		tbPanels.addTab("User", null, pnUser, null);
 		pnUser.setLayout(null);
 		
-		btnCancel = new JButton("Cancel");
-		btnCancel.setBounds(486, 170, 80, 25);
-		pnUser.add(btnCancel);
+		btnCancelUser = new JButton("Cancel");
+		btnCancelUser.setBounds(486, 170, 80, 25);
+		pnUser.add(btnCancelUser);
 		
 		lbName = new JLabel("Name");
 		lbName.setBounds(10, 30, 45, 15);
 		pnUser.add(lbName);
 		
-		tfName = new JTextField();
-		tfName.setBounds(78, 25, 190, 25);
-		pnUser.add(tfName);
-		tfName.setColumns(10);
+		tfNameUser = new JTextField();
+		tfNameUser.setBounds(78, 25, 190, 25);
+		pnUser.add(tfNameUser);
+		tfNameUser.setColumns(10);
 		
 		lbCPF = new JLabel("CPF");
 		lbCPF.setBounds(318, 30, 45, 15);
 		pnUser.add(lbCPF);
 		
-		tfCPF = new JTextField();
-		tfCPF.setBounds(376, 25, 190, 25);
-		pnUser.add(tfCPF);
-		tfCPF.setColumns(10);
+		tfCPFUser = new JTextField();
+		tfCPFUser.setBounds(376, 25, 190, 25);
+		pnUser.add(tfCPFUser);
+		tfCPFUser.setColumns(10);
 		
 		lbMail = new JLabel("E-mail");
 		lbMail.setBounds(10, 77, 55, 16);
 		pnUser.add(lbMail);
 		
 		lbMailArroba = new JLabel("@");
-		lbMailArroba.setBounds(308, 77, 55, 16);
+		lbMailArroba.setBounds(278, 77, 18, 16);
 		pnUser.add(lbMailArroba);
 		
-		tfMailAdress = new JTextField();
-		tfMailAdress.setBounds(78, 75, 190, 25);
-		pnUser.add(tfMailAdress);
-		tfMailAdress.setColumns(10);
+		tfMailAdressUser = new JTextField();
+		tfMailAdressUser.setBounds(78, 75, 190, 25);
+		pnUser.add(tfMailAdressUser);
+		tfMailAdressUser.setColumns(10);
 		
-		tfMailDomain = new JTextField();
-		tfMailDomain.setBounds(376, 74, 190, 26);
-		pnUser.add(tfMailDomain);
-		tfMailDomain.setColumns(10);
+		tfMailDomainUser = new JTextField();
+		tfMailDomainUser.setBounds(297, 74, 190, 26);
+		pnUser.add(tfMailDomainUser);
+		tfMailDomainUser.setColumns(10);
 		
-		btnConfirm = new JButton("Confirm");
-		btnConfirm.setEnabled(true);
-		btnConfirm.setBounds(376, 169, 98, 26);
-		pnUser.add(btnConfirm);
+		btnConfirmUser = new JButton("Confirm");
+		btnConfirmUser.setEnabled(false);
+		btnConfirmUser.setBounds(376, 169, 98, 26);
+		pnUser.add(btnConfirmUser);
 		
-		btnClear = new JButton("Clear");
-		btnClear.setBounds(265, 169, 98, 26);
-		pnUser.add(btnClear);
+		btnClearUser = new JButton("Clear");
+		btnClearUser.setBounds(265, 169, 98, 26);
+		pnUser.add(btnClearUser);
 		
 		lbPhone = new JLabel("Phone");
 		lbPhone.setBounds(10, 126, 55, 16);
 		pnUser.add(lbPhone);
 		
-		tfPhone = new JTextField();
-		tfPhone.setBounds(78, 124, 190, 25);
-		pnUser.add(tfPhone);
-		tfPhone.setColumns(10);
+		tfPhoneUser = new JTextField();
+		tfPhoneUser.setBounds(78, 124, 190, 25);
+		pnUser.add(tfPhoneUser);
+		tfPhoneUser.setColumns(10);
 		
-		btnClear.addActionListener( new ActionListener() {
+		btnClearUser.addActionListener( new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				tfName.setText("");
-				tfCPF.setText("");
-				tfMailAdress.setText("");
-				tfMailDomain.setText("");
-				tfPhone.setText("");
+				tfNameUser.setText("");
+				tfCPFUser.setText("");
+				tfMailAdressUser.setText("");
+				tfMailDomainUser.setText("");
+				tfPhoneUser.setText("");
 			}
 		});
 		
-		btnCancel.addActionListener( new ActionListener() {
+		btnCancelUser.addActionListener( new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				frame.dispose();
-				System.out.println("Frame close with " + btnCancel.getText());
+				System.out.println("Frame close with " + btnCancelUser.getText());
 				System.exit(0);
 			}
 		});
 		
-		btnConfirm.addActionListener(new ActionListener() {
+		btnConfirmUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// TODO
-				tmpUser = new User(tfName.getText(),tfCPF.getText(),tfMailAdress.getText() + "@"+tfMailDomain.getText(),tfPhone.getText());
+				tmpUser = new User(tfNameUser.getText(),tfCPFUser.getText(),tfMailAdressUser.getText() + "@"+tfMailDomainUser.getText(),tfPhoneUser.getText());
 				str.AddUser(tmpUser);
-				System.out.println(str.searchCpf(tfCPF.getText()).getEmail());
+				System.out.println(str.searchCpf(tfCPFUser.getText()).getEmail());
 			}
 		});
 		
@@ -281,7 +282,7 @@ public class myInterface {
 		});
 		
 		tfNameStore.addKeyListener(new KeyAdapter() {
-		 public void keyReleased(KeyEvent e) {
+			public void keyReleased(KeyEvent e) {
 		        tfNameStore = (JTextField) e.getSource();
 		        String text = tfNameStore.getText();
 		        tfNameStore.setText(text.toUpperCase());
@@ -289,6 +290,10 @@ public class myInterface {
 		        	btnConfirmStore.setEnabled(true);
 		        } else btnConfirmStore.setEnabled(false);
 		      }
+		});
+		
+		tfNameUser.addKeyListener(new KeyAdapter() {
+			
 		});
 	}
 }
