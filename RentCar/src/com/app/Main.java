@@ -1,9 +1,12 @@
 package com.app;
 
+import java.awt.EventQueue;
+
 import javax.swing.*;
 
 public class Main {
 	public static void main(String[] args) {
+		/* system test
 		// criaodo loja
 		Store store = new Store("teste");
 		Category sluxo = new Category("superluxo", 270);
@@ -28,7 +31,19 @@ public class Main {
 		/// imprime os dados de victor e de ana de novo
 		store.userDataPrint(store.searchCpf("862288875-48"));
 		store.userDataPrint(store.searchCpf("121212"));
-
+		*/
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					myInterface window = new myInterface();
+					window.getFrame().setVisible(true);
+					System.out.println("Running...");
+				} catch (Exception e) {
+					System.out.println("Error frame : ");
+					e.printStackTrace();
+				}
+			}
+		});
 
 	}
 }
