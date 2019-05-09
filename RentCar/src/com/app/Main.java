@@ -1,5 +1,7 @@
 package com.app;
 
+import java.awt.EventQueue;
+
 import javax.swing.*;
 
 public class Main {
@@ -28,7 +30,17 @@ public class Main {
 		/// imprime os dados de victor e de ana de novo
 		store.userDataPrint(store.searchCpf("862288875-48"));
 		store.userDataPrint(store.searchCpf("121212"));
-
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					myInterface window = new myInterface();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 
 	}
 }
