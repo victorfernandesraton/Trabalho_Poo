@@ -22,16 +22,29 @@ import javax.swing.JRadioButton;
 
 public class myInterface {
 
-	JFrame frame;
-	private JTextField textField;
+	private JFrame frame;
+	private JPanel pnUser;
+	private JTabbedPane tbPanels;
+	private JButton btnCancel;
+	private JButton btnClear;
+	private JButton btnConfirm;
+	private JLabel lbName;
+	private JTextField tfName;
+	private JLabel lbCPF;
+	private JTextField tfCPF;
+	private JLabel lbMail;
+	private JLabel lbMailArroba;
 	private JTextField tfMailAdress;
 	private JTextField tfMailDomain;
 	private JTextField tfPhone;
-
+	private JLabel lbPhone;
 	/**
 	 * Launch the application.
 	 */
 	
+	public JFrame getFrame() {
+		return frame;
+	}
 
 	/**
 	 * Create the application.
@@ -50,63 +63,63 @@ public class myInterface {
 		frame.setBounds(200, 200, 750, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JTabbedPane tbPanels = new JTabbedPane(JTabbedPane.TOP);
+		tbPanels = new JTabbedPane(JTabbedPane.TOP);
 		frame.getContentPane().add(tbPanels, BorderLayout.CENTER);
 		
-		JPanel pnUser = new JPanel();
+		pnUser = new JPanel();
 		tbPanels.addTab("User", null, pnUser, null);
 		pnUser.setLayout(null);
 		
-		JButton btnCancel = new JButton("Cancel");
+		btnCancel = new JButton("Cancel");
 		btnCancel.setBounds(615, 389, 80, 25);
 		pnUser.add(btnCancel);
 		
-		JLabel lbName = new JLabel("Name");
+		lbName = new JLabel("Name");
 		lbName.setBounds(10, 30, 45, 15);
 		pnUser.add(lbName);
 		
-		JTextField tfName = new JTextField();
+		tfName = new JTextField();
 		tfName.setBounds(78, 25, 190, 25);
 		pnUser.add(tfName);
 		tfName.setColumns(10);
 		
-		JLabel lbCPF = new JLabel("CPF");
+		lbCPF = new JLabel("CPF");
 		lbCPF.setBounds(318, 30, 45, 15);
 		pnUser.add(lbCPF);
 		
-		JTextField tfCPF = new JTextField();
+		tfCPF = new JTextField();
 		tfCPF.setBounds(376, 25, 190, 25);
 		pnUser.add(tfCPF);
 		tfCPF.setColumns(10);
 		
-		JLabel lbMail = new JLabel("E-mail");
+		lbMail = new JLabel("E-mail");
 		lbMail.setBounds(10, 77, 55, 16);
 		pnUser.add(lbMail);
 		
-		JLabel lbMailArroba = new JLabel("@");
+		lbMailArroba = new JLabel("@");
 		lbMailArroba.setBounds(308, 77, 55, 16);
 		pnUser.add(lbMailArroba);
 		
-		JTextField tfMailAdress = new JTextField();
+		tfMailAdress = new JTextField();
 		tfMailAdress.setBounds(78, 75, 190, 25);
 		pnUser.add(tfMailAdress);
 		tfMailAdress.setColumns(10);
 		
-		JTextField tfMailDomain = new JTextField();
+		tfMailDomain = new JTextField();
 		tfMailDomain.setBounds(376, 74, 196, 26);
 		pnUser.add(tfMailDomain);
 		tfMailDomain.setColumns(10);
 		
-		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm = new JButton("Confirm");
 		btnConfirm.setEnabled(false);
 		btnConfirm.setBounds(494, 388, 98, 26);
 		pnUser.add(btnConfirm);
 		
-		JButton btnClear = new JButton("Clear");
+		btnClear = new JButton("Clear");
 		btnClear.setBounds(376, 388, 98, 26);
 		pnUser.add(btnClear);
 		
-		JLabel lbPhone = new JLabel("Phone");
+		lbPhone = new JLabel("Phone");
 		lbPhone.setBounds(10, 126, 55, 16);
 		pnUser.add(lbPhone);
 		

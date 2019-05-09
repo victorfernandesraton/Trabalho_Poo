@@ -36,7 +36,7 @@ public class Main {
 			public void run() {
 				try {
 					myInterface window = new myInterface();
-					window.frame.setVisible(true);
+					window.getFrame().setVisible(true);
 					System.out.println("Running...");
 				} catch (Exception e) {
 					System.out.println("Error frame : ");
