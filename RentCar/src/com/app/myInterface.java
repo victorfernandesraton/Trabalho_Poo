@@ -7,6 +7,8 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 
+import jdk.internal.org.objectweb.asm.tree.analysis.Frame;
+
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -15,10 +17,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JRadioButton;
 
 public class myInterface {
 
 	JFrame frame;
+	private JTextField textField;
+	private JTextField tfMailAdress;
+	private JTextField tfMailDomain;
+	private JTextField tfPhone;
 
 	/**
 	 * Launch the application.
@@ -30,6 +38,7 @@ public class myInterface {
 	 */
 	public myInterface() {
 		initialize();
+		System.out.println("Open sytem... OK");
 	}
 
 	/**
@@ -48,17 +57,93 @@ public class myInterface {
 		tbPanels.addTab("User", null, pnUser, null);
 		pnUser.setLayout(null);
 		
-		JButton btnCancel = new JButton("New button");
-		btnCancel.setBounds(617, 383, 89, 23);
+		JButton btnCancel = new JButton("Cancel");
+		btnCancel.setBounds(615, 389, 80, 25);
 		pnUser.add(btnCancel);
 		
 		JLabel lbName = new JLabel("Name");
-		lbName.setBounds(10, 29, 46, 14);
+		lbName.setBounds(10, 30, 45, 15);
 		pnUser.add(lbName);
 		
-		JTextPane tpName = new JTextPane();
-		tpName.setSize(203, 23);
-		tpName.setLocation(57, 29);
-		pnUser.add(tpName);
+		JTextField tfName = new JTextField();
+		tfName.setBounds(78, 25, 190, 25);
+		pnUser.add(tfName);
+		tfName.setColumns(10);
+		
+		JLabel lbCPF = new JLabel("CPF");
+		lbCPF.setBounds(318, 30, 45, 15);
+		pnUser.add(lbCPF);
+		
+		JTextField tfCPF = new JTextField();
+		tfCPF.setBounds(376, 25, 190, 25);
+		pnUser.add(tfCPF);
+		tfCPF.setColumns(10);
+		
+		JLabel lbMail = new JLabel("E-mail");
+		lbMail.setBounds(10, 77, 55, 16);
+		pnUser.add(lbMail);
+		
+		JLabel lbMailArroba = new JLabel("@");
+		lbMailArroba.setBounds(308, 77, 55, 16);
+		pnUser.add(lbMailArroba);
+		
+		JTextField tfMailAdress = new JTextField();
+		tfMailAdress.setBounds(78, 75, 190, 25);
+		pnUser.add(tfMailAdress);
+		tfMailAdress.setColumns(10);
+		
+		JTextField tfMailDomain = new JTextField();
+		tfMailDomain.setBounds(376, 74, 196, 26);
+		pnUser.add(tfMailDomain);
+		tfMailDomain.setColumns(10);
+		
+		JButton btnConfirm = new JButton("Confirm");
+		btnConfirm.setEnabled(false);
+		btnConfirm.setBounds(494, 388, 98, 26);
+		pnUser.add(btnConfirm);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.setBounds(376, 388, 98, 26);
+		pnUser.add(btnClear);
+		
+		JLabel lbPhone = new JLabel("Phone");
+		lbPhone.setBounds(10, 126, 55, 16);
+		pnUser.add(lbPhone);
+		
+		tfPhone = new JTextField();
+		tfPhone.setBounds(78, 124, 190, 25);
+		pnUser.add(tfPhone);
+		tfPhone.setColumns(10);
+		
+		btnClear.addActionListener( new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				tfName.setText("");
+				tfCPF.setText("");
+				tfMailAdress.setText("");
+				tfMailDomain.setText("");
+			}
+		});
+		
+		btnCancel.addActionListener( new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				frame.dispose();
+				System.out.println("Frame close with " + btnCancel.getText());
+				System.exit(0);
+			}
+		});
+		
+		btnConfirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (tfName.getText().equals("")) {
+					btnConfirm.setEnabled(false);
+				} else btnConfirm.setEnabled(true);
+			}
+		});
 	}
 }
