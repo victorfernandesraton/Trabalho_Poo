@@ -22,6 +22,66 @@ import javax.swing.JRadioButton;
 
 public class myInterface {
 
+	public JPanel getPnUser() {
+		return pnUser;
+	}
+
+	public JTabbedPane getTbPanels() {
+		return tbPanels;
+	}
+
+	public JButton getBtnCancel() {
+		return btnCancel;
+	}
+
+	public JButton getBtnClear() {
+		return btnClear;
+	}
+
+	public JButton getBtnConfirm() {
+		return btnConfirm;
+	}
+
+	public JLabel getLbName() {
+		return lbName;
+	}
+
+	public JTextField getTfName() {
+		return tfName;
+	}
+
+	public JLabel getLbCPF() {
+		return lbCPF;
+	}
+
+	public JTextField getTfCPF() {
+		return tfCPF;
+	}
+
+	public JLabel getLbMail() {
+		return lbMail;
+	}
+
+	public JLabel getLbMailArroba() {
+		return lbMailArroba;
+	}
+
+	public JTextField getTfMailAdress() {
+		return tfMailAdress;
+	}
+
+	public JTextField getTfMailDomain() {
+		return tfMailDomain;
+	}
+
+	public JTextField getTfPhone() {
+		return tfPhone;
+	}
+
+	public JLabel getLbPhone() {
+		return lbPhone;
+	}
+
 	private JFrame frame;
 	private JPanel pnUser;
 	private JTabbedPane tbPanels;
