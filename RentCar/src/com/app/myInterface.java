@@ -20,6 +20,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
 import java.awt.GridLayout;
+import java.awt.TextField;
+
 import javax.swing.BoxLayout;
 import javax.swing.SpringLayout;
 import java.awt.event.KeyAdapter;
@@ -325,9 +327,6 @@ public class myInterface {
 					btnConfirmUser.setEnabled(false);
 				} else btnConfirmUser.setEnabled(true);
 			}
-		});
-		
-		
-		
+		});	
 	}
 }
